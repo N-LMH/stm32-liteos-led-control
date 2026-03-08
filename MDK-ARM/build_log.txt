@@ -1,0 +1,221 @@
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'E:\Keil\ARM\ARMCC\Bin'
+Build target 'project'
+compiling hal_irq.c...
+compiling main.c...
+../LiteOS/kernel/include/los_task.h(423): warning:  #47-D: incompatible redefinition of macro "LOS_TASK_MIN_STACK_SIZE"  (declared at line 63 of "../Core/Inc/los_config.h")
+  #define LOS_TASK_MIN_STACK_SIZE (ALIGN(LOSCFG_TASK_MIN_STACK_SIZE, LOSCFG_STACK_POINT_ALIGN_SIZE))
+../Core/Src/main.c(133): warning:  #223-D: function "LOS_KernelInit" declared implicitly
+    UINT32 ret = LOS_KernelInit();
+../Core/Src/main.c(178): warning:  #223-D: function "LOS_Start" declared implicitly
+    LOS_Start();
+../Core/Src/main.c(470): warning:  #111-D: statement is unreachable
+    return LOS_OK;
+../Core/Src/main.c(485): warning:  #111-D: statement is unreachable
+    return LOS_OK;
+../Core/Src/main.c(544): warning:  #111-D: statement is unreachable
+    return LOS_OK;
+../Core/Src/main.c: 6 warnings, 0 errors
+compiling los_event.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_event.c(145): error:  #136: struct "<unnamed>"  has no field "eventMask"
+          runTask->eventMask = eventMask;
+../LiteOS/kernel/base/los_event.c(146): error:  #136: struct "<unnamed>"  has no field "eventMode"
+          runTask->eventMode = mode;
+../LiteOS/kernel/base/los_event.c(212): error:  #136: struct "<unnamed>"  has no field "eventMode"
+              if (((resumedTask->eventMode & LOS_WAITMODE_OR) && ((resumedTask->eventMask & events) != 0)) ||
+../LiteOS/kernel/base/los_event.c(212): error:  #136: struct "<unnamed>"  has no field "eventMask"
+              if (((resumedTask->eventMode & 
+OS_WAITMODE_OR) && ((resumedTask->eventMask & events) != 0)) ||
+../LiteOS/kernel/base/los_event.c(213): error:  #136: struct "<unnamed>"  has no field "eventMode"
+                  ((resumedTask->eventMode & LOS_WAITMODE_AND) &&
+../LiteOS/kernel/base/los_event.c(214): error:  #136: struct "<unnamed>"  has no field "eventMask"
+                   ((resumedTask->eventMask & eventCB->uwEventID) == resumedTask->eventMask))) {
+../LiteOS/kernel/base/los_event.c(214): error:  #136: struct "<unnamed>"  has no field "eventMask"
+                   ((resumedTask->eventMask & eventCB->uwEventID) == resumedTask->eventMask))) {
+../LiteOS/kernel/base/los_event.c: 2 warnings, 7 errors
+compiling los_percpu.c...
+compiling los_swtmr.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_swtmr.c: 2 warnings, 0 errors
+compiling los_task.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_task.c(103): error:  #20: identifier "LOSCFG_BASE_CORE_TSK_LIMIT" is undefined
+          g_mainTask[i].taskId = LOSCFG_BASE_CORE_TSK_LIMIT;
+../LiteOS/kernel/base/los_task.c(180): error:  #18: expected a ")"
+          
+fi
+);
+../LiteOS/kernel/base/los_task.c(307): error:  #20: identifier "LOSCFG_BASE_CORE_TSK_LIMIT" is undefined
+      g_taskMaxNum = LOSCFG_BASE_CORE_TSK_LIMIT;
+../LiteOS/kernel/base/los_task.c(367): error:  #20: identifier "LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE" is undefined
+      taskInitParam.uwStackSize = LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE;
+../LiteOS/kernel/base/los_task.c(613): error:  #20: identifier "LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE" is undefined
+          initParam->uwStackSize = LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE;
+../LiteOS/kernel/base/los_task.c(617): error:  #20: identifier "LOSCFG_TASK_MIN_STACK_SIZE" is undefined
+      if (initParam->uwStackSize < 
+OS_TASK_MIN_STACK_SIZE) {
+../LiteOS/kernel/base/los_task.c(665): warning:  #177-D: function "OsTaskSyncWait"  was declared but never referenced
+  STATIC INLINE UINT32 OsTaskSyncWait(const LosTaskCB *taskCB)
+../LiteOS/kernel/base/los_task.c: 3 warnings, 6 errors
+compiling los_hwi.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_hwi.c(472): warning:  #186-D: pointless comparison of unsigned integer with zero
+          if (!
+WI_PRI_VALID(hwiPrio)) {
+../LiteOS/kernel/base/los_hwi.c(472): error:  #20: identifier "LOSCFG_HWI_PRIO_LIMIT" is undefined
+          if (!
+WI_PRI_VALID(hwiPrio)) {
+../LiteOS/kernel/base/los_hwi.c(502): error:  #20: identifier "OS_USER_HWI_MIN" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(502): error:  #20: identifier "OS_USER_HWI_MAX" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(513): error:  #20: identifier "OS_USER_HWI_MIN" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(513): error:  #20: identifier "OS_USER_HWI_MAX" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(524): error:  #20: identifier "OS_USER_HWI_MIN" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(524): error:  #20: identifier "OS_USER_HWI_MAX" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(535): error:  #20: identifier "OS_USER_HWI_MIN" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(535): error:  #20: identifier "OS_USER_HWI_MAX" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(546): error:  #20: identifier "OS_USER_HWI_MIN" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(546): error:  #20: identifier "OS_USER_HWI_MAX" is undefined
+      if (!
+WI_NUM_VALID(hwiNum)) {
+../LiteOS/kernel/base/los_hwi.c(549): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if (!
+WI_PRI_VALID(priority)) {
+../LiteOS/kernel/base/los_hwi.c(549): error:  #20: identifier "LOSCFG_HWI_PRIO_LIMIT" is undefined
+      if (!
+WI_PRI_VALID(priority)) {
+../LiteOS/kernel/base/los_hwi.c(639): warning:  #223-D: function "HalIrqInit" declared implicitly
+      HalIrqInit();
+../LiteOS/kernel/base/los_hwi.c: 5 warnings, 12 errors
+compiling los_sem.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_sem.c(59): error:  #20: identifier "LOSCFG_BASE_IPC_SEM_LIMIT" is undefined
+      g_allSem = (LosSemCB *)LOS_MemAlloc(m_aucSysMem0, (LOSCFG_BASE_IPC_SEM_LIMIT * sizeof(LosSemCB)));
+../LiteOS/kernel/base/los_sem.c(143): error:  #20: identifier "LOSCFG_BASE_IPC_SEM_LIMIT" is undefined
+      if (
+ET_SEM_INDEX(semHandle) >= (UINT32)LOSCFG_BASE_IPC_SEM_LIMIT) {
+../LiteOS/kernel/base/los_sem.c: 2 warnings, 2 errors
+compiling app_init.c...
+../LiteOS/kernel/include/los_task.h(423): warning:  #47-D: incompatible redefinition of macro "LOS_TASK_MIN_STACK_SIZE"  (declared at line 63 of "../Core/Inc/los_config.h")
+  #define LOS_TASK_MIN_STACK_SIZE (ALIGN(LOSCFG_TASK_MIN_STACK_SIZE, LOSCFG_STACK_POINT_ALIGN_SIZE))
+../Core/Src/app_init.c: 1 warning, 0 errors
+compiling los_sortlink.c...
+compiling los_mux.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_mux.c(59): error:  #20: identifier "LOSCFG_BASE_IPC_MUX_LIMIT" is undefined
+      g_allMux = (LosMuxCB *)LOS_MemAlloc(m_aucSysMem0, (LOSCFG_BASE_IPC_MUX_LIMIT * sizeof(LosMuxCB)));
+../LiteOS/kernel/base/los_mux.c(124): error:  #20: identifier "LOSCFG_BASE_IPC_MUX_LIMIT" is undefined
+      if (
+ET_MUX_INDEX(muxHandle) >= (UINT32)LOSCFG_BASE_IPC_MUX_LIMIT) {
+../LiteOS/kernel/base/los_mux.c(281): error:  #20: identifier "LOSCFG_BASE_IPC_MUX_LIMIT" is undefined
+      if (
+ET_MUX_INDEX(muxHandle) >= (UINT32)LOSCFG_BASE_IPC_MUX_LIMIT) {
+../LiteOS/kernel/base/los_mux.c(395): error:  #20: identifier "LOSCFG_BASE_IPC_MUX_LIMIT" is undefined
+      if (
+ET_MUX_INDEX(muxHandle) >= (UINT32)LOSCFG_BASE_IPC_MUX_LIMIT) {
+../LiteOS/kernel/base/los_mux.c: 2 warnings, 4 errors
+compiling los_misc.c...
+compiling los_tick.c...
+../LiteOS/kernel/base/los_tick.c(88): warning:  #223-D: function "HalClockInit" declared implicitly
+      HalClockInit();
+../LiteOS/kernel/base/los_tick.c(95): warning:  #223-D: function "HalClockStart" declared implicitly
+      HalClockStart();
+../LiteOS/kernel/base/los_tick.c(116): error:  #20: identifier "LOSCFG_BASE_CORE_TICK_PER_SECOND" is undefined
+      return g_sysClock / LOSCFG_BASE_CORE_TICK_PER_SECOND;
+../LiteOS/kernel/base/los_tick.c(126): warning:  #223-D: function "HalClockGetCycles" declared implicitly
+      cycle = HalClockGetCycles();
+../LiteOS/kernel/base/los_tick.c(138): warning:  #223-D: function "HalClockGetCycles" declared implicitly
+      nanos = HalClockGetCycles() * (OS_SYS_NS_PER_SECOND / OS_SYS_NS_PER_MS) / (g_sysClock / OS_SYS_NS_PER_MS);
+../LiteOS/kernel/base/los_tick.c(148): error:  #20: identifier "LOSCFG_BASE_CORE_TICK_PER_SECOND" is undefined
+      return (UINT32)(((UINT64)millisec * LOSCFG_BASE_CORE_TICK_PER_SECOND) / OS_SYS_MS_PER_SECOND);
+../LiteOS/kernel/base/los_tick.c(153): error:  #20: identifier "LOSCFG_BASE_CORE_TICK_PER_SECOND" is undefined
+      return (UINT32)(((UINT64)tick * 
+S_SYS_MS_PER_SECOND) / LOSCFG_BASE_CORE_TICK_PER_SECOND);
+../LiteOS/kernel/base/los_tick.c(158): warning:  #223-D: function "HalDelayUs" declared implicitly
+      HalDelayUs(usecs);
+../LiteOS/kernel/base/los_tick.c(166): warning:  #223-D: function "HalDelayUs" declared implicitly
+          HalDelayUs(delayUs);
+../LiteOS/kernel/base/los_tick.c(169): warning:  #223-D: function "HalDelayUs" declared implicitly
+      HalDelayUs(msecs * OS_SYS_US_PER_MS);
+../LiteOS/kernel/base/los_tick.c: 7 warnings, 3 errors
+compiling los_exc.c...
+compiling los_queue.c...
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/base/los_queue.c(56): error:  #20: identifier "LOSCFG_BASE_IPC_QUEUE_LIMIT" is undefined
+      size = LOSCFG_BASE_IPC_QUEUE_LIMIT * sizeof(LosQueueCB);
+../LiteOS/kernel/base/los_queue.c(199): error:  #20: identifier "LOSCFG_BASE_IPC_QUEUE_LIMIT" is undefined
+      if (
+ET_QUEUE_INDEX(queueId) >= LOSCFG_BASE_IPC_QUEUE_LIMIT) {
+../LiteOS/kernel/base/los_queue.c(224): error:  #20: identifier "LOSCFG_BASE_IPC_QUEUE_LIMIT" is undefined
+      if (
+ET_QUEUE_INDEX(queueId) >= LOSCFG_BASE_IPC_QUEUE_LIMIT) {
+../LiteOS/kernel/base/los_queue.c(458): error:  #20: identifier "LOSCFG_BASE_IPC_QUEUE_LIMIT" is undefined
+      if (
+ET_QUEUE_INDEX(queueId) >= LOSCFG_BASE_IPC_QUEUE_LIMIT) {
+../LiteOS/kernel/base/los_queue.c(522): error:  #20: identifier "LOSCFG_BASE_IPC_QUEUE_LIMIT" is undefined
+      if (
+ET_QUEUE_INDEX(queueId) >= LOSCFG_BASE_IPC_QUEUE_LIMIT) {
+../LiteOS/kernel/base/los_queue.c: 2 warnings, 5 errors
+compiling los_mp.c...
+../LiteOS/kernel/include/los_task.h(423): warning:  #47-D: incompatible redefinition of macro "LOS_TASK_MIN_STACK_SIZE"  (declared at line 63 of "../Core/Inc/los_config.h")
+  #define LOS_TASK_MIN_STACK_SIZE (ALIGN(LOSCFG_TASK_MIN_STACK_SIZE, LOSCFG_STACK_POINT_ALIGN_SIZE))
+../LiteOS/kernel/base/los_mp.c: 1 warning, 0 errors
+compiling cpu.c...
+compiling los_init.c...
+../LiteOS/kernel/include/los_task.h(423): warning:  #47-D: incompatible redefinition of macro "LOS_TASK_MIN_STACK_SIZE"  (declared at line 63 of "../Core/Inc/los_config.h")
+  #define LOS_TASK_MIN_STACK_SIZE (ALIGN(LOSCFG_TASK_MIN_STACK_SIZE, LOSCFG_STACK_POINT_ALIGN_SIZE))
+../LiteOS/kernel/include/los_trace.h(147): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_MAX_FLAG          = 0x80000000,
+../LiteOS/kernel/include/los_trace.h(148): warning:  #66-D: enumeration value is out of "int" range
+      TRACE_USER_DEFAULT_FLAG = 0xFFFFFFF0,
+../LiteOS/kernel/init/los_init.c(72): error:  #5: cannot open source input file "los_ld_initlib_pri.h": No such file or directory
+  #include "los_ld_initlib_pri.h"
+../LiteOS/kernel/init/los_init.c: 3 warnings, 1 error
+compiling los_adapter.c...
+../LiteOS/kernel/include/los_task.h(423): warning:  #47-D: incompatible redefinition of macro "LOS_TASK_MIN_STACK_SIZE"  (declared at line 63 of "../Core/Inc/los_config.h")
+  #define LOS_TASK_MIN_STACK_SIZE (ALIGN(LOSCFG_TASK_MIN_STACK_SIZE, LOSCFG_STACK_POINT_ALIGN_SIZE))
+../Core/Src/los_adapter.c(30): warning:  #223-D: function "LOS_TickHandler" declared implicitly
+          LOS_TickHandler();
+../Core/Src/los_adapter.c: 2 warnings, 0 errors
+compiling task.c...
+"project\project.axf" - 40 Error(s), 38 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:09

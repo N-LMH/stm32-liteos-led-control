@@ -1,0 +1,1 @@
+/usr/bin/bash: line 1: wine: command not found
