@@ -1,38 +1,17 @@
-# Build files
-MDK-ARM/DebugConfig/
-MDK-ARM/Listings/
-MDK-ARM/Objects/
-MDK-ARM/RTE/
-*.uvguix.*
-*.bak
-*.ddk
-*.edk
-*.lst
-*.lnp
-*.mpf
-*.mpj
-*.obj
-*.omf
-*.plg
-*.rpt
-*.tmp
-*.__i
-*._ia
-*.crf
-*.d
+# Project Manager files
+.pm/
+project-manager.config.json
+
+# Build outputs
 *.o
-*.axf
-*.tra
-*.dep
-*.iex
 *.hex
+*.bin
+*.elf
 *.map
-*.scvd
 
 # IDE files
 .vscode/
-.claude/
-*.code-workspace
+.idea/
 
 # OS files
 .DS_Store
